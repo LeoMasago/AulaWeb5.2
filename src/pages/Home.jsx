@@ -13,6 +13,16 @@ export default function Home(){
                     <MovieCard key={filme.id} {...filme}/>
                 ))
             }
+        </CardContainer>  
+
+        <CardContainer titulo="Melhor avaliados">
+            {
+                movies
+                .filter( filme => (filme.avaliacao > 8.0))
+                .map( filme => (
+                    <MovieCard key={filme.id} {...filme}/>
+                ))
+            }
         </CardContainer>      
         </>
     )
